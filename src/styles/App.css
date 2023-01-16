@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin-inline: auto;
+  margin-block: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 0.25s;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(1) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.adding-todo {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.todo-count {
+  margin-bottom: 1em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0 auto;
+  width: clamp(300px, 60vw, 500px);
+}
+
+.todo {
+  background-color: #1a1a1a91;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.todo__text {
+  text-align: left;
+  flex-grow: 1;
+  margin-inline: 0.5em;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.todo__action {
+  background-color: #1a1a1a;
+  padding: 5px;
+  margin: 0 3px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.25s;
+}
+.todo__action:hover {
+  border-color: rgb(0, 216, 255)
+}
+
+.done {
+  text-decoration: line-through;
+  color: rgb(60, 172, 80);
+  opacity: 0.5;
+}
